@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tradingview-telegram-alert
+    env: python
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 7928418839:AAGQu90YL7Sh1yp9q163YDOD8AUBPplnV9c
+      - key: CHAT_ID
+        value: 749827665
