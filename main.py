@@ -17,9 +17,13 @@ def tradingview_alert():
         "chat_id": CHAT_ID,
         "text": message
     }
+
     requests.post(url, json=payload)
     return "OK"
 
 @app.route("/", methods=["GET"])
 def home():
-    return "🚀 TradingView Webhook Bot is Running!"
+    return "TradingView Telegram Alert is Running!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
